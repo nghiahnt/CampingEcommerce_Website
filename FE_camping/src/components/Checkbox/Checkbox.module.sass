@@ -1,0 +1,77 @@
+@import ../../styles/helpers
+
+.checkbox
+  display: inline-block
+  position: relative
+  user-select: none 
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  &:hover .tick
+    border-color: $green 
+    +t
+      border-color: $gray 
+      +dark
+        border-color: $dark
+
+.input
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  &:checked + .in .tick
+    border-color: $green 
+    border-width: 8px
+    +dark
+      border-color: $green
+    +m
+      border-width: 6px
+
+.in
+  display: flex
+  transition: opacity .25s 
+
+.tick
+  position: relative
+  flex-shrink: 0
+  width: 32px
+  height: 32px
+  margin-right: 16px
+  border-radius: 50%
+  border: 2px solid $gray
+  font-size: 0 
+  transition: all .25s
+  +dark
+    border-color: $dark
+  +m
+    width: 24px
+    height: 24px
+    margin-right: 8px
+
+
+.text
+  padding-top: 3px
+  font-size: 20px
+  line-height: 1.4
+  color: $bl 
+  +dark
+    color: $dark-wh
+  +m
+    padding-top: 2px
+    font-size: 16px
+  a
+    color: $bl 
+    text-decoration: underline
+    font-weight: 600
+    +dark
+      color: $dark-wh
+
+
+.link
+  text-decoration: underline 
+  font-weight: 600
+  color: $bl
+  +dark
+    color: $dark-wh
+  &:hover
+    text-decoration: none
+

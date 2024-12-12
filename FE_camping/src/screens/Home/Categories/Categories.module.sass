@@ -1,0 +1,71 @@
+@import ../../../styles/helpers
+
+.categories
+  margin-bottom: 144px
+  +t
+    overflow: hidden
+
+.stage
+  +m
+    text-align: center
+
+.title
+  +t
+    margin-bottom: 48px
+    padding-right: 130px
+    font-size: 32px
+    line-height: 1.5
+  +m
+    margin-bottom: 56px
+    padding: 0
+    text-align: center
+
+.container
+  margin: 0 -16px
+  +t
+    margin-right: -95px
+  +m
+    margin: 0 -4px 
+
+.slider
+  visibility: hidden
+  +m
+    padding-bottom: 88px
+
+.slide
+  padding: 0 16px 
+
+.item
+  display: block
+  padding: 28px 10px
+  border-radius: 24px
+  background: $gray  
+  text-align: center
+  transition: opacity .25s
+  &:hover
+    opacity: .8
+  +dark
+    background: $dark
+
+.icon
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 32px
+  margin-bottom: 16px
+  font-size: 0
+  +dark
+    fill: $wh
+
+.pic
+  max-width: 100%
+  max-height: 100%  
+
+.text
+  font-weight: 600
+  line-height: 1.5
+  color: $bl
+  +dark
+    color: $dark-wh
+
+

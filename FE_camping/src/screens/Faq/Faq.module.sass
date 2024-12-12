@@ -1,0 +1,47 @@
+@import ../../styles/helpers
+
+.section
+  +nl
+    margin-bottom: 144px
+    +x
+      margin-bottom: 112px
+    +d
+      margin-bottom: 64px
+
+.category
+  margin-bottom: 48px
+  font-size: 32px
+  font-weight: 700
+  line-height: 1.5
+  +t
+    margin-bottom: 40px
+    font-size: 24px
+    line-height: (40/24)
+  +m
+    line-height: (32/24)  
+
+.list
+  display: flex
+  flex-wrap: wrap
+  margin: -72px -48px 0
+  +x
+    margin-top: -64px
+  +d
+    display: block
+    margin: 0
+
+.item
+  flex: 0 0 calc(50% - 96px)
+  width: calc(50% - 96px)
+  margin: 72px 48px 0
+  +x
+    margin-top: 64px
+  +d
+    width: 100%
+    margin: 0
+  +nl
+    +d
+      margin-bottom: 48px
+    +t
+      margin-bottom: 40px
+

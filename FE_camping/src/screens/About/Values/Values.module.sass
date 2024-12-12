@@ -1,0 +1,76 @@
+@import ../../../styles/helpers
+
+.about
+  text-align: center
+
+.center
+  max-width: 1244px
+
+.title
+  +t
+    font-size: 32px
+    line-height: 1.5
+
+.list
+  display: flex
+  +d
+    flex-wrap: wrap
+    justify-content: center
+    margin: -64px -32px 0 
+  +t
+    display: block
+    margin: 0
+
+.item
+  flex-shrink: 0 
+  width: 304px
+  +d
+    flex: 0 0 calc(50% - 64px)
+    width: calc(50% - 64px)
+    margin: 64px 32px 0 
+  +t
+    width: 100%
+    margin: 0 
+  +nl
+    margin-right: auto
+    +d
+      margin-right: 32px
+    +t
+      margin: 0 0 64px
+    +m
+      margin-bottom: 56px
+
+.icon
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 64px
+  height: 64px
+  margin: 0 auto 32px 
+  border-radius: 50%
+  background: $gray  
+  font-size: 0
+  path
+    stroke: $bl-dark
+  +dark
+    background: $dark 
+    path
+      stroke: $wh
+
+.category
+  margin-bottom: 16px
+  font-size: 24px
+  line-height: (40/24)
+  font-weight: 600 
+
+.text
+  font-size: 20px
+  line-height: (32/20) 
+
+.buttons
+  margin-top: 72px
+  text-align: center
+  +d
+    margin-top: 64px
+  +m
+    margin-top: 56px

@@ -1,0 +1,101 @@
+@import ../../styles/helpers
+
+.details
+  +nl
+    margin-bottom: 144px
+    +x
+      margin-bottom: 112px
+    +m
+      margin-bottom: 104px
+
+.details .title
+  margin-bottom: 144px
+  +x
+    margin-bottom: 112px
+  +m
+    margin-bottom: 104px
+
+.list
+  display: flex
+  flex-wrap: wrap
+  margin: -72px -48px 0
+  +d
+    display: block
+    margin: 0
+
+.item
+  flex: 0 0 calc(50% - 96px)
+  width: calc(50% - 96px)
+  margin: 72px 48px 0
+  +d
+    width: 100%
+    margin: 0
+  +nl
+    +d
+      margin-bottom: 64px
+    +m
+      margin-bottom: 56px
+
+.category
+  margin-bottom: 16px
+  font-size: 24px
+  font-weight: 600
+  line-height: (40/24) 
+
+.text
+  font-size: 18px
+  line-height: (32/18) 
+  a
+    text-decoration: underline
+    font-weight: 600
+    color: $bl
+    +dark
+      color: $dark-wh 
+    &:hover
+      text-decoration: none
+
+.container .center
+  max-width: 1176px
+
+.row
+  display: flex
+  margin: 0 -48px
+  +d
+    display: block
+    margin: 0
+
+.wrap, .form
+  flex: 0 0 calc(50% - 96px)
+  width: calc(50% - 96px)
+  margin: 0 48px 
+  +d
+    width: 100%
+    margin: 0 
+    
+.wrap
+  +d
+    max-width: 440px
+    margin-bottom: 64px
+  +t
+    max-width: 400px
+  +m
+    margin-bottom: 56px
+
+.wrap .title
+  +t
+    font-size: 32px
+    line-height: 1.5
+
+.form
+  padding-top: 40px
+  +d
+    padding: 0
+
+.field
+  +nl
+    margin-bottom: 48px
+    +m
+      margin-bottom: 40px
+
+.button
+  min-width: auto

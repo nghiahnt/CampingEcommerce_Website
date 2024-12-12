@@ -1,0 +1,39 @@
+@import ../../styles/helpers
+
+.breadcrumbs
+  margin-bottom: 48px
+  +d
+    display: none
+
+.item
+  display: inline
+  position: relative
+  flex-shrink: 0 
+  font-size: 20px
+  line-height: 1.6
+  font-weight: 500 
+  color: $bl
+  +dark
+    color: $dark-wh 
+  &:not(:last-child)
+    margin-right: 24px
+    &:after
+      content: ""
+      display: inline-block
+      width: 8px
+      height: 14px
+      margin: 0 0 0 20px
+      background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat 0 0 / 100% 100%
+      +dark
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893Z' fill='white'/%3E%3C/svg%3E%0A")
+      
+.breadcrumbs_mb_md
+  margin-bottom: 32px
+
+.link    
+  color: $bl 
+  transition: opacity .25s
+  +dark
+    color: $dark-wh 
+  &:hover
+    opacity: .8 

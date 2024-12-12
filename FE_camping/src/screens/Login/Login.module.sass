@@ -1,0 +1,57 @@
+@import ../../styles/helpers
+
+.form
+  max-width: 496px
+  margin: 0 auto
+  +t
+    max-width: 100% 
+
+.field
+  +nl
+    margin-bottom: 48px
+    +m
+      margin-bottom: 40px
+
+.checkbox
+  margin-bottom: 46px
+  +m
+    margin-bottom: 38px
+
+.row
+  display: flex
+  align-items: center
+  margin: 0 -12px
+  text-align: center
+  +a
+    display: block
+    margin: 0
+
+.col
+  flex: 0 0 calc(50% - 24px)
+  width: calc(50% - 24px)
+  margin: 0 12px
+  +m
+    width: 100%
+    margin: 0
+  +nl
+    +m
+      margin-bottom: 24px
+.button
+  padding: 0 16px 
+
+.buttons
+  margin-bottom: 24px
+
+.link
+  text-decoration: underline
+  font-size: 20px
+  color: $bl 
+  transition: color .25s
+  +dark
+    color: $dark-wh
+    &:hover
+      color: $green 
+  +m
+    font-size: 16px
+  &:hover
+    color: $green 

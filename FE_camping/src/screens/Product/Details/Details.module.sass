@@ -1,0 +1,72 @@
+@import ../../../styles/helpers
+
+.details
+  +d
+    text-align: center
+  
+.center
+  max-width: 1176px
+
+.row
+  display: flex
+  +d
+    display: block
+
+.col
+  &:first-child
+    flex-grow: 1
+    padding-right: 72px
+    +x
+      padding-right: 56px
+    +d
+      margin-bottom: 64px
+      padding: 0
+    +m
+      margin-bottom: 56px
+  &:nth-child(2)
+    flex-shrink: 0 
+    width: 496px
+    padding-top: 32px
+    +d
+      width: 100%
+      padding: 0 
+
+.item
+  display: flex
+  +d
+    display: block
+  +nl
+    margin-bottom: 57px
+    +d
+      margin-bottom: 64px
+    +m
+      margin-bottom: 56px
+
+.icon
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-shrink: 0 
+  width: 64px
+  height: 64px
+  margin-right: 32px
+  border-radius: 50%
+  background: $gray
+  +dark
+    background: $dark
+    path
+      stroke: $wh 
+  path
+    stroke: $bl-dark
+  +d
+    margin: 0 auto 32px 
+
+.category
+  margin-bottom: 16px
+  font-size: 24px
+  font-weight: 600
+  line-height: (40/24)
+
+.text
+  font-size: 20px
+  line-height: 1.6 

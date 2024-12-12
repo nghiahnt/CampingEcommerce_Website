@@ -1,0 +1,78 @@
+@import ../../styles/helpers
+
+.row
+  display: flex
+  align-items: flex-start
+  +d
+    display: block
+
+.col
+  &:first-child
+    flex-shrink: 0
+    width: 440px 
+    padding: 54px 56px 
+    border-radius: 48px 
+    border: 2px solid $gray
+    +dark
+      border-color: $dark
+    +d
+      width: 100%
+      margin-bottom: 64px
+      padding: 0
+      border-radius: 0
+      border: none   
+    +m
+      margin-bottom: 56px
+  &:nth-child(2)
+    flex-grow: 1
+    padding-left: 96px
+    +x
+      padding-left: 64px
+    +d
+      padding-left: 0
+
+.filters
+  margin-bottom: 0  
+  +x
+    margin-bottom: 0
+  +m
+    margin-bottom: 0
+
+.box
+  +rmin(1200)
+    display: block !important
+  +d
+    display: none
+    padding-top: 40px
+  .field
+    +nl
+      margin-bottom: 48px
+      +m
+        margin-bottom: 40px
+
+.title
+  margin-bottom: 48px
+  font-size: 32px
+  line-height: 1.5
+  font-weight: 600 
+  +d
+    display: none
+
+.fieldset
+  margin-bottom: 80px
+  +d
+    margin-bottom: 64px
+  +m
+    margin-bottom: 56px
+
+.buttons .button
+  +nl
+    margin-bottom: 24px
+    +m
+      margin-bottom: 16px
+
+.open
+  +d
+    display: inline-flex
+  +m
+    margin-top: 0

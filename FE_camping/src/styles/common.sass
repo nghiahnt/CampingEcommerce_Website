@@ -1,0 +1,105 @@
+html
+  &.no-scroll
+    overflow: hidden
+
+body
+  min-width: 375px
+  min-height: 100vh 
+  +f
+  font-size: 16px
+  line-height: 1.5
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $bl
+  &.no-scroll
+    overflow: hidden
+  +dark-body
+    background: $bg-dark
+    color: $dark-wh
+
+button,
+input,
+textarea,
+select
+  +f
+
+.section
+  margin-bottom: 144px
+  +x
+    margin-bottom: 112px
+  +m
+    margin-bottom: 104px
+
+.wide
+  width: 100%
+
+.center
+  max-width: 1344px
+  margin: 0 auto
+  padding: 0 48px
+  +t
+    padding: 0 40px 
+  +m
+    padding: 0 32px 
+
+.title
+  font-size: 40px
+  line-height: (56/40)
+  font-weight: 700
+  +m
+    font-size: 32px
+    line-height: 1.5
+  &_mb-md
+    margin-bottom: 48px
+    +m
+      margin-bottom: 24px
+  &_mb-lg
+    margin-bottom: 72px
+    +x
+      margin-bottom: 64px
+    +m
+      margin-bottom: 56px
+  br
+    +m
+      display: none
+
+.stage
+  margin-bottom: 8px
+  line-height: 1.5
+  font-weight: 600
+  font-style: italic
+  color: $blue 
+
+.icon-header
+  font-size: 21px
+  fill: $bl-dark
+  transition: fill .25s
+  +dark-common
+    fill: $wh
+    &:hover
+      fill: rgba($wh, .75)
+  +m
+    font-size: 24px
+  &:hover
+    fill: rgba($bl-dark, .75)
+
+.yellow
+  background: rgba($yellow, .1)
+  color: $yellow
+   
+.blue
+  background: rgba($blue, .1)
+  color: $blue 
+  
+.pink
+  background: rgba($pink, .1)
+  color: $pink 
+  
+.green
+  background: rgba($green, .1)
+  color: $green 
+
+
+
+
+  

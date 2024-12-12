@@ -1,0 +1,208 @@
+@import ../../styles/helpers
+
+.row
+  display: flex
+  +d
+    display: block
+
+.col
+  &:first-child
+    flex-grow: 1
+    padding-right: 96px
+    +x
+      padding-right: 56px
+    +d
+      margin-bottom: 48px
+      padding: 0
+    +m
+      margin-bottom: 40px
+  &:nth-child(2)
+    flex-shrink: 0
+    width: 552px 
+    padding-top: 120px
+    +x
+      width: 520px
+    +d
+      width: 100%
+      padding: 0 
+
+.item
+  display: none
+
+.steps
+  position: relative
+  display: flex
+  margin-bottom: 72px
+  +dark
+    &:before
+      background: $dark
+  +x
+    margin-bottom: 64px
+  +d
+    max-width: 600px
+  +m
+    max-width: 300px
+    margin-bottom: 56px
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    z-index: -2
+    transform: translateY(-50%)
+    height: 2px
+    background: $gray
+
+.step
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-shrink: 0 
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  background: $wh
+  box-shadow: 0 0 0 4px $wh 
+  border: 2px solid $gray  
+  font-size: 20px
+  font-weight: 600
+  color: $bl  
+  transition: all .25s
+  +dark
+    box-shadow: 0 0 0 4px $bg-dark
+    border-color: $dark
+    background: $bg-dark
+    color: $dark-wh  
+    +m
+      box-shadow: 0 0 0 2px $bg-dark
+    &.active
+      border-color: $green
+      background-color: $green
+  +m
+    width: 24px
+    height: 24px
+    box-shadow: 0 0 0 2px $wh
+    font-size: 14px
+  &:not(:last-child):before
+    content: ""
+    position: absolute
+    top: 50%
+    width: 0
+    height: 2px
+    z-index: -1
+    background: $green
+    transition: width .25s  
+  &.active
+    background: $green
+    color: #F7FAFC 
+    &:before
+      width: 100%  
+  &:first-child
+    &:before
+      left: 0
+  &:nth-child(2)
+    &:before
+      left: 33.33%
+  &:nth-child(3)
+    &:before
+      left: 66.66%
+  +nl
+    margin-right: auto
+
+.container
+  padding: 56px
+  border: 2px solid $gray
+  border-radius: 48px
+  +dark
+    border-color: $dark 
+  +t
+    border-radius: 40px 
+  +m
+    padding: 24px
+    border-radius: 32px 
+
+.category
+  margin-bottom: 48px
+  font-size: 32px
+  font-weight: 600
+  line-height: 1.5 
+  +m
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 1.6
+
+.fieldset
+  margin-bottom: 80px
+  +m
+    margin-bottom: 56px
+
+.field, .line
+  +nl
+    margin-bottom: 48px
+    +m
+      margin-bottom: 40px
+
+.line
+  display: flex
+  margin: 0 -12px
+  +a
+    display: block
+    margin: 0
+  +nl
+    +a
+      margin-bottom: 40px
+
+.cell
+  flex: 0 0 calc(50% - 24px)
+  width: calc(50% - 24px)
+  margin: 0 12px 
+  +a
+    width: 100%
+    margin: 0
+  +nl
+    +a
+      margin-bottom: 40px
+
+.button
+  +nl
+    margin-bottom: 24px
+    +m
+      margin-bottom: 16px
+
+.checkoutBox
+  display: none
+  padding-top: 32px
+  
+.variants
+  display: flex
+  align-items: center
+  margin-bottom: 48px
+  +m
+    margin-bottom: 40px
+
+.variants .checkbox
+  +nl
+    margin-right: 56px
+    +a
+      margin-right: auto
+
+.group 
+  .item
+    display: none
+  &:nth-child(2)
+    padding-top: 32px
+    +m
+      padding-top: 16px
+
+.item 
+  &.voucherContainer 
+    max-height: 200px /* Set the maximum height as needed */
+    overflow-y: auto /* Enable vertical scrollbar when needed */
+  
+
+  &.voucherList 
+    display: flex
+    flex-direction: column
+    gap: 10px /* Adjust the gap between vouchers as needed */
+  

@@ -1,0 +1,72 @@
+@import ../../../styles/helpers
+
+.search
+  position: relative
+  width: 21px
+  overflow: hidden
+  transition: width .25s 
+  +m
+    width: 100%
+
+
+.nav_search
+  display: none
+  +m
+    display: block
+    flex-shrink: 0 
+    margin-bottom: 24px
+
+.button
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+  font-size: 0
+  transition: left .25s
+  +m
+    left: 18px
+
+.input
+  width: 100%
+  height: 48px 
+  padding: 0
+  opacity: 0
+  border: 2px solid $gray
+  border-radius: 24px 
+  +f
+  font-size: 16px
+  color: $bl
+  transition: padding .25s, opacity .25s
+  +dark
+    border-color: $dark
+    background: $bg-dark 
+    color: $dark-wh
+    +placeholder
+      color: $dark-wh
+  +m
+    padding: 0 22px 0 54px 
+    opacity: 1
+  +placeholder
+    color: $bl 
+    +m
+      color: rgba($bl, .4) 
+
+.show 
+  width: 352px
+  +d
+    width: 325px
+  +m
+    width: 100%
+  .input
+    padding: 0 24px 0 64px
+    opacity: 1
+    +d
+      padding: 0 16px 0 48px
+    +m
+      padding: 0 24px 0 56px
+  .button
+    left: 24px
+    +d
+      left: 16px
+    +m
+      left: 18px

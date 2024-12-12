@@ -1,0 +1,89 @@
+@import ../../styles/helpers
+
+.review
+  .container
+    display: flex
+    min-height: 600px
+    padding: 48px 96px
+    border-radius: 64px  
+    background: $gray 
+    +x
+      padding: 48px 
+    +d
+      min-height: 505px
+      padding: 24px 48px 
+    +t
+      display: block
+      min-height: 100% 
+      padding: 0 
+      background: none 
+      border-radius: 0
+      text-align: center
+    +dark
+      background: $dark 
+      +t
+        background: none 
+
+.title
+  +t
+    font-size: 32px
+    line-height: 1.5
+
+.box
+  align-self: center
+  max-width: 480px
+  margin-right: auto
+  +d
+    padding-right: 40px
+  +t
+    max-width: 100%
+    margin: 0 0 64px  
+    padding: 0
+  +m
+    margin-bottom: 56px
+
+.wrap
+  align-self: flex-end
+  flex-shrink: 0
+  width: 400px
+  +t
+    width: 100% 
+
+.slider
+  padding-bottom: 112px
+  visibility: hidden
+  +d
+    padding-bottom: 88px
+  +t
+    padding-bottom: 96px
+  +m
+    padding-bottom: 88px
+
+.ava
+  width: 80px
+  height: 80px
+  margin-bottom: 32px
+  padding: 6px
+  border-radius: 50%
+  border: 2px solid $green
+  background: $wh 
+  overflow: hidden
+  font-size: 0
+  +dark
+    background: $dark 
+  +t
+    margin: 0 auto 32px
+  .pic
+    width: 100% 
+    min-height: 100% 
+    border-radius: 50% 
+
+.author
+  margin-bottom: 16px
+  font-size: 24px
+  font-weight: 600
+  line-height: (40/24)  
+
+.text
+  font-size: 20px
+  line-height: 1.6

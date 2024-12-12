@@ -1,0 +1,98 @@
+@import ../../styles/helpers
+
+.filters
+  margin-bottom: 72px
+  +x
+    margin-bottom: 64px
+  +m
+    margin-bottom: 56px
+  
+.sorting
+  display: flex
+  +t
+    flex-wrap: wrap
+  +m
+    margin-top: -24px
+  +nl
+    margin-bottom: 32px
+
+.wrap
+  display: flex
+  flex-wrap: wrap
+  margin: -24px auto 0 -32px
+  +d
+    margin-left: -24px
+  +rmin(1024)
+    display: flex !important
+  +t
+    display: none
+    order: 3
+    width: 100% 
+    margin: 0
+    padding-top: 32px
+  > div
+    margin: 24px 0 0 32px 
+    +d
+      margin-left: 24px
+    +t
+      margin: 0
+    +nl
+      +t
+        margin-bottom: 24px
+      +m
+        margin-bottom: 16px
+  
+.field
+  flex-shrink: 0 
+  margin-left: 72px
+  +t
+    position: relative
+    z-index: 15
+    margin-left: 40px
+  +m
+    margin: 24px 0 0 0
+
+.tags
+  display: flex
+  flex-wrap: wrap
+  margin: -24px 0 0 -24px
+  +m
+    margin: -16px 0 0 -16px 
+
+.tag
+  position: relative
+  min-width: 180px
+  margin: 24px 0 0 24px
+  padding: 0 64px 0 22px
+  border-radius: 32px
+  background: $gray  
+  font-size: 20px
+  font-weight: 600 
+  line-height: 64px  
+  +dark
+    background: $dark
+  +m
+    min-width: auto 
+    margin: 16px 0 0 16px 
+    padding: 0 48px 0 16px
+    border-radius: 24px 
+    font-size: 16px
+    line-height: 48px
+
+.remove
+  position: absolute
+  top: 50%
+  right: 24px
+  transform: translateY(-50%)
+  width: 14px
+  height: 14px
+  background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 100% auto
+  transition: opacity .25s
+  +dark
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z' fill='white'/%3E%3C/svg%3E%0A")
+  +m
+    right: 20px
+    width: 12px
+    height: 12px
+  &:hover
+    opacity: .7 

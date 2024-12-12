@@ -1,0 +1,91 @@
+[class^="button"]
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  min-width: 165px
+  padding: 0 40px 
+  height: 64px
+  border-radius: 32px
+  +f
+  font-size: 20px
+  font-weight: 700
+  transition: all .25s
+  +m
+    min-width: 91px
+    height: 48px
+    border-radius: 24px 
+    padding: 0 24px 
+    font-size: 16px
+    
+.button-green
+  background: $green 
+  color: #F7FAFC
+  &:hover
+    background: lighten(#00CC96, .8)
+    
+.button-border
+  padding: 0 38px 
+  border: 2px solid $gray
+  color: $bl
+  +m
+    padding: 0 22px 
+  &:hover
+    border-color: $bl-dark 
+  +dark-common
+    border-color: $dark
+    background: $bg-dark
+    color: $dark-wh
+    &:hover
+      border-color: $dark-wh
+
+.button-wide
+  min-width: 100% 
+  +m
+    min-width: 100% 
+
+.button-open
+  position: relative
+  display: none
+  align-items: center
+  height: 64px  
+  margin-right: auto
+  padding: 0 62px 0 22px 
+  border-radius: 32px 
+  border: 2px solid $gray
+  background: $wh 
+  font-size: 20px
+  font-weight: 600 
+  white-space: nowrap
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  transition: all .25s
+  +dark-common
+    border-color: $dark
+    background: $bg-dark  
+    color: $dark-wh 
+  +t
+    display: flex
+  +m
+    height: 48px
+    margin-top: 24px
+    padding: 0 46px 0 14px
+    border-radius: 24px 
+    font-size: 16px 
+  &:after
+    content: ""
+    position: absolute
+    top: 50%
+    right: 24px
+    transform: translateY(-50%) 
+    width: 14px
+    height: 8px
+    background: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / auto 100%
+    transition: transform .25s
+    +dark-common
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='white'/%3E%3C/svg%3E%0A") 
+    +m
+      right: 18px
+  &.active:after
+    transform: translateY(-50%) rotate(180deg)
+
+

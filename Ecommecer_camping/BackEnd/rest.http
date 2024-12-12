@@ -1,0 +1,9 @@
+
+### verifyOTP
+DELETE  http://localhost:8345/api/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "daohai271@gmail.com"
+}
+

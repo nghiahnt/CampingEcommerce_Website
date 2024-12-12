@@ -1,0 +1,52 @@
+@import ../../styles/helpers
+  
+.switch
+  display: inline-block
+  position: relative
+  user-select: none 
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+.input    
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0 
+
+.switch_in
+  display: block
+  width: 56px
+  height: 32px
+  border: 4px solid $gray
+  background: $gray 
+  border-radius: 16px 
+  transition: all .25s
+  +dark
+    background: $dark 
+
+.tick
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 24px
+  height: 24px
+  background: $green
+  border-radius: 50%  
+  font-size: 0
+  transition: all .25s
+
+.pic_moon
+  display: none
+
+.input:checked + .switch_in
+  border-color: #1E1E27
+  background: #1E1E27
+
+.input:checked + .switch_in .tick
+  transform: translateX(24px)
+
+.input:checked + .switch_in .pic_moon
+  display: inline-block
+
+.input:checked + .switch_in .pic_sun
+  display: none

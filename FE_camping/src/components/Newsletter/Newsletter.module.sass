@@ -1,0 +1,59 @@
+@import ../../styles/helpers
+
+.Newsletter
+  .container
+    padding: 96px 48px 
+    border-radius: 56px 
+    background: $gray 
+    +d
+      padding: 64px 48px
+    +t
+      padding: 0 
+      border-radius: 0
+      background: none
+    +dark
+      background: $dark
+      +t
+        background: none 
+
+.stage
+  text-align: center
+
+.title
+  text-align: center
+  +t
+    font-size: 32px
+    line-height: 1.5
+
+.form
+  display: flex
+  width: 100% 
+  max-width: 635px
+  margin: 0 auto
+  +a
+    display: block
+  .field
+    flex-grow: 1
+    +a
+      margin-bottom: 24px
+    input
+      border-color: transparent 
+      font-weight: 400 
+      +t
+        background: $gray
+      +dark
+        background: #2C2C37 
+        border-color: #2C2C37
+        color: $dark-wh
+        +placeholder
+          color: rgba($dark-wh, .64) 
+
+.buttons
+  flex-shrink: 0
+  width: 186px
+  padding-left: 24px
+  +a
+    width: 114px
+    padding: 0
+
+    

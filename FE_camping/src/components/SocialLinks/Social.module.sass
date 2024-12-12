@@ -1,0 +1,70 @@
+@import ../../styles/helpers
+
+.menu
+  position: absolute
+  bottom: 48px
+  display: flex
+  align-items: center
+  +t
+    bottom: 36px
+  +m
+    left: 32px
+    bottom: 32px
+    z-index: 6
+  .link
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0 
+    width: 24px
+    height: 24px
+    font-size: 0
+    +nl
+      margin-right: 24px
+    .icon
+      +dark
+        fill: $wh
+      &:hover
+        fill: rgba($bl, .75)
+        +dark
+          fill: rgba($wh, .75)
+          
+.footer
+  margin-bottom: 48px
+  display: flex
+  .link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $gray
+    transition: background .25s
+    +dark
+      background: $dark
+      &:hover
+        background: rgba($dark, .75) 
+      +m
+        background: none !important
+    &:hover
+      background: rgba($gray, .75) 
+    +m
+      width: 24px
+      height: 24px
+      background: none !important
+    +nl
+      margin-right: 16px
+      +m
+        margin-right: 24px
+    .icon
+      +dark
+        fill: $wh
+
+
+
+
+.icon
+  font-size: 20px
+  fill: $bl-dark
+  transition: fill .25s

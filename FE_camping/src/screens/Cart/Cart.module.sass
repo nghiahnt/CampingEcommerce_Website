@@ -1,0 +1,37 @@
+@import ../../styles/helpers
+
+.head 
+	display: flex
+	align-items: flex-end
+	margin-bottom: 72px
+	+x
+		margin-bottom: 64px
+	+m
+		margin-bottom: 56px
+	+a
+		display: block
+
+.box
+	margin-right: auto
+	+a
+		margin: 0 0 24px 
+
+.row
+	display: flex
+	+x
+		display: block
+
+.col
+	&:first-child
+		flex-grow: 1
+		padding-right: 48px
+		+x
+			margin-bottom: 48px
+			padding: 0
+		+m
+			margin-bottom: 40px
+	&:nth-child(2)
+		flex-shrink: 0
+		width: 416px 
+		+x
+			width: 100% 

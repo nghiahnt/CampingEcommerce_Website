@@ -1,0 +1,258 @@
+@import ../../../styles/helpers
+
+.menu
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 170px 0 90px 
+  background: $wh
+  visibility: hidden
+  opacity: 0
+  transition: visible .25s, opacity .25s, transform .25s
+  +dark
+    background: $bg-dark
+  +x
+    padding-top: 155px
+  +t
+    padding: 145px 0 80px
+  +m
+    padding: 110px 0 70px
+  +a
+    padding-top: 126px
+
+.menu_center
+  width: 100%
+  height: 100%
+
+.visible_menu
+  visibility: visible
+  opacity: 1
+
+.container
+  height: 100% 
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  +m
+    margin-bottom: 24px
+    overflow: visible
+    height: auto
+  &::-webkit-scrollbar
+    width: 5px
+  &::-webkit-scrollbar-track-piece
+    background-color: $gray
+    border-radius: 0
+  &::-webkit-scrollbar-thumb:vertical
+    width: 5px 
+    background-color: rgba($bl, .1)
+    border-radius: 0
+  &::-webkit-scrollbar-thumb:horizontal,
+  &::-webkit-scrollbar-thumb:window-inactive
+    background-color: rgba($bl, .1)
+    border-radius: 0
+
+.menu_list
+  display: flex
+  flex-direction: column
+  align-items: center
+  transition: transform .25s
+  +m
+    flex-direction: row
+  +a
+    flex-direction: column
+
+.item
+  position: relative
+  font-size: 24px
+  line-height: 40px
+  color: $bl 
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  +dark
+    color: $dark-wh
+    &:hover
+      color: $green 
+      +t
+        color: $wh
+  +m
+    position: static
+  &[href]
+    transition: color .25s
+  &:hover
+    color: $green
+    +t
+      color: $bl
+    .submenu_head
+      .icon
+        fill: $green
+        +dark
+          +t
+            fill: $wh
+        +t
+          fill: $bl-dark
+  +nl
+    margin-bottom: 24px
+    +x
+      margin-bottom: 20px
+    +t
+      margin-bottom: 24px
+    +m
+      margin: 0 24px 0 0 
+    +a
+      margin: 0 0 16px
+
+.submenu_head
+  display: flex
+  align-items: center
+  transition: color .25s 
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  cursor: pointer
+  .icon
+    margin-left: 16px
+    font-size: 14px
+    transition: fill .25s
+    +dark
+      fill: $wh
+
+.submenu_body
+  position: absolute
+  top: 0
+  left: calc(100% + 70px)
+  width: 0
+  overflow: hidden
+  transition: width .25s
+  +dark
+    +m
+      background: $bg-dark
+  +rmin(768)
+    visibility: visible
+    opacity: 1
+  +m
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    padding: 56px 0 32px 
+    overflow: visible
+    background: $wh 
+    visibility: hidden
+    opacity: 0
+    transition: all .25s 
+  +a
+    padding-top: 106px
+
+.active_link
+  font-weight: 500
+  color: $green
+  +dark
+    color: $green
+  &:hover
+    color: $bl
+    +t
+      color: inherit
+    +dark
+      color: $wh 
+
+.active_link .submenu_head
+  color: $green 
+  .icon
+    fill: $green
+    +dark
+      fill: $green
+    +t
+      fill: $green
+
+.active_link .submenu_body
+  width: 100% 
+  +m
+    visibility: visible
+    opacity: 1
+
+.button_back, .button_close
+  display: none
+  font-size: 0
+  +dark
+    +m
+      background: $dark
+      .icon
+        fill: $wh
+  +m
+    display: inline-block
+    position: fixed
+    top: 32px
+    z-index: 20
+    width: 32px
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $gray
+    .icon
+      font-size: 16px
+      fill: $bl-dark
+
+.button_back
+  left: 32px
+  
+.button_close
+  right: 32px
+
+.submenu_group
+  display: flex
+  flex-direction: column
+  align-items: center
+  +m
+    height: 100% 
+    overflow-y: auto
+    -ms-overflow-style: none  // IE 10+
+    scrollbar-width: none  // Firefox
+    -webkit-overflow-scrolling: touch
+    &::-webkit-scrollbar
+      display: none
+
+.submenu_group .submenu_link
+  white-space: nowrap
+  font-weight: 400 
+  color: $bl
+  transition: color .25s
+  +dark
+    color: $dark-wh
+    &:hover
+      color: $green
+  &:hover
+    color: $green  
+  +nl
+    margin-bottom: 24px
+    +x
+      margin-bottom: 20px
+    +t
+      margin-bottom: 24px
+    +m
+      margin-bottom: 16px
+
+.left
+  +m
+    z-index: 10
+
+.left .menu_list
+  transform: translateX(-110px)
+  +m
+    transform: none
+
+.button
+  display: none
+  +m
+    display: inline-flex
+    flex-shrink: 0 
+    margin: auto 0 40px
+
+
+
+
+
+
+
+
+
+      
+

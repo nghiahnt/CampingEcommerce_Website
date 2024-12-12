@@ -1,0 +1,93 @@
+@import ../../styles/helpers
+
+.new, .sale
+  position: absolute
+  top: 24px
+  right: -24px
+  z-index: 2
+  min-width: 96px
+  padding: 0 14px 
+  text-align: center
+  border-radius: 24px 
+  background: $red 
+  border: 2px solid $wh
+  line-height: 36px
+  white-space: nowrap
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  color: #F7FAFC
+  +dark
+    border-color: $bg-dark
+
+.sale
+  background: $red
+.new
+  background: $green
+
+.view
+  position: relative
+  margin-bottom: 32px
+
+.preview
+  display: block
+  position: relative
+  padding-bottom: 100%
+  border-radius: 48px 
+  overflow: hidden
+  background: $gray 
+  font-size: 0
+  +dark
+    background: $dark
+
+.pic
+  +coverdiv
+  object-fit: cover
+
+.button
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  min-width: 145px
+  height: 48px
+  padding: 0 24px
+  visibility: hidden
+  opacity: 0  
+  font-size: 16px
+  +t
+    display: none
+
+.name    
+  display: block
+  margin-bottom: 16px
+  font-size: 24px
+  font-weight: 600
+  line-height: (40/24) 
+  color: $bl
+  +dark
+    color: $dark-wh
+
+.details
+  display: flex
+  align-items: center
+
+.category
+  margin-right: 24px
+  padding: 0 16px
+  border-radius: 24px 
+  line-height: 40px
+  font-size: 14px
+  font-weight: 700   
+  text-transform: uppercase
+
+.price
+  font-weight: 600 
+  .old
+    margin-right: 8px
+    text-decoration: line-through
+    color: rgba($bl, .24)
+    +dark
+      color: rgba($dark-wh, .24)
+  .actual
+    font-size: 20px

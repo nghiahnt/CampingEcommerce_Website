@@ -1,0 +1,72 @@
+@import ../../../styles/helpers
+
+.receipt
+  padding: 54px 56px
+  border-radius: 48px 
+  border: 2px solid $gray
+  +dark
+    border-color: $dark 
+  +x
+    padding-right: 168px
+  +t
+    padding-right: 56px
+  +m
+    padding: 24px 
+    border-radius: 32px 
+
+.category
+  margin-bottom: 48px
+  font-size: 32px
+  font-weight: 600 
+  +m
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 1.6
+
+.wrap
+  margin-bottom: 80px
+  +x
+    display: flex
+    flex-wrap: wrap
+    margin: -48px -48px 48px 
+  +t
+    display: block
+    margin: 0 0 80px
+  +m
+    margin-bottom: 56px
+
+.line
+  display: flex
+  +x
+    flex: 0 0 calc(50% - 96px)
+    width: calc(50% - 96px)
+    margin: 48px 48px 0 
+  +t
+    width: 100%
+    margin: 0 
+  +nl
+    margin-bottom: 48px
+    +x
+      margin-bottom: 0
+    +t
+      margin-bottom: 48px
+    +m
+      margin-bottom: 40px
+
+.line, .text
+  font-size: 24px
+  line-height: (40/24)
+  +m
+    font-size: 16px
+    line-height: 1.5
+  &:first-child
+    margin-right: auto
+
+.total .text
+  font-weight: 600 
+
+.receipt .button
+  +x
+    min-width: auto
+  +t
+    min-width: 100% 

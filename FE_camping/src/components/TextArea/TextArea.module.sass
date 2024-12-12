@@ -1,0 +1,45 @@
+@import ../../styles/helpers
+
+.wrap
+  min-height: 64px
+  +m
+    min-height: 48px
+
+.label
+  margin-bottom: 16px
+  line-height: 1.5
+  +m
+    margin-bottom: 8px
+    font-size: 14px
+    line-height: (24/14) 
+    
+.textarea
+  width: 100%
+  border: 2px solid $gray
+  border-radius: 32px 
+  height: 192px
+  padding: 18px 22px
+  resize: none
+  +f
+  font-size: 20px
+  font-weight: 600 
+  color: $bl
+  transition: border-color .25s
+  +m
+    border-radius: 24px 
+    font-size: 16px
+    height: 144px
+  +dark
+    border-color: $dark
+    background: $bg-dark  
+    color: $dark-wh
+    +placeholder
+      color: rgba($dark-wh, .64) 
+    &:focus
+      border-color: $green 
+  &:focus
+    border-color: $green 
+  +placeholder
+    color: rgba($bl, .4) 
+
+      

@@ -1,0 +1,14 @@
+# Ignore tất cả các thư mục node_modules ở mọi cấp
+**/node_modules/
+
+# Ignore tệp hoặc thư mục tạm thời
+**/*.log
+**/yarn-error.log
+**/.npmrc
+
+# Ignore các tệp build hoặc output
+**/dist/
+**/build/
+
+# Ignore các tệp thực thi hoặc công cụ không cần theo dõi
+**/*.exe

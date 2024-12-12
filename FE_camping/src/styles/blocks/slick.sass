@@ -1,0 +1,298 @@
+.slick-slider 
+  position: relative
+  display: block
+  box-sizing: border-box
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -ms-touch-action: pan-y
+  touch-action: pan-y
+  -webkit-tap-highlight-color: transparent
+
+.slick-list 
+  position: relative
+  overflow: hidden
+  display: block
+  margin: 0
+  padding: 0
+
+  &:focus 
+    outline: none
+
+  &.dragging 
+    cursor: hand
+    cursor: hand
+  
+.slick-slider .slick-track,
+.slick-slider .slick-list 
+  -webkit-transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0)
+  -ms-transform: translate3d(0, 0, 0)
+  -o-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+
+.slick-track 
+  position: relative
+  left: 0
+  top: 0
+  display: block
+  margin-left: auto
+  margin-right: auto
+  &:before,
+  &:after 
+    content: ""
+    display: table
+  &:after 
+    clear: both
+  .slick-loading & 
+    visibility: hidden
+  
+.slick-slide 
+  display: none
+  float: left
+  height: 100%
+  min-height: 1px
+  [dir="rtl"] & 
+    float: right
+  img 
+    display: block
+  &.slick-loading img 
+    display: none
+  display: none
+  &.dragging img 
+    pointer-events: none
+  .slick-initialized & 
+    display: block
+  .slick-loading & 
+    visibility: hidden
+  .slick-vertical & 
+    display: block
+    height: auto
+    border: 1px solid transparent
+  
+.slick-arrow.slick-hidden 
+  display: none
+
+.slick-initialized 
+  visibility: visible !important
+
+.slick-arrow
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  font-size: 0
+  transition: all .25s 
+
+.slider-category
+  .slick-arrow
+    position: absolute
+    top: -125px
+    +x
+      top: -117px
+    +t
+      top: -93px
+    +m
+      top: auto
+      bottom: 0
+  .slick-prev
+    right: 79px
+    +t
+      right: 159px
+    +m
+      right: auto
+      left: calc(50% - 56px) 
+  .slick-next
+    right: 15px
+    +t
+      right: 95px
+    +m
+      right: calc(50% - 56px) 
+
+.slider-review
+  .slick-slide
+    padding-left: 2px
+  .slick-current 
+    padding-left: 0px
+  .slick-track
+    display: flex
+    align-items: flex-end
+    +t
+      align-items: flex-start
+  .slick-arrow
+    position: absolute
+    bottom: 0
+    border: 2px solid $bl-dark
+    &:hover
+      border-color: rgba($bl-dark, .6)
+    +t
+      background-color: $gray
+      border-color: $gray
+      &:hover
+        border-color: $bl-dark
+    +dark-common
+      background-color: $br-dark
+      &:hover
+        background-color: $br-dark
+      +t
+        border-color: transparent
+  .slick-prev
+    left: 0
+    +t
+      left: calc(50% - 56px) 
+  .slick-next
+    left: 64px
+    +t
+      left: auto
+      right: calc(50% - 56px) 
+  .slick-dots
+    display: flex !important
+    margin-top: 40px
+    +t
+      justify-content: center
+    +m
+      margin-top: 32px
+    li
+      font-size: 0
+      button
+        width: 8px
+        height: 8px
+        border: 1px solid $gray
+        border-radius: 50%
+        background: $green
+        transition: all .25s
+        font-size: 0
+        +dark-common
+          border: 1px solid $dark
+        &:hover
+          opacity: .7 
+      &.slick-active button
+        border-color: $green
+        background: $wh 
+        opacity: 1
+        +dark-common
+          border-color: $green 
+          background: $dark 
+      +nl
+        margin-right: 16px
+
+.slider-blog
+  .slick-slide > div
+    +m
+      display: block
+      margin: 0 28px
+  .slick-arrow
+    position: absolute
+    bottom: 0
+  .slick-prev
+    left: calc(50% - 56px) 
+  .slick-next
+    right: calc(50% - 56px)
+
+.slider-product
+  .slick-slide
+    padding: 12px 0 
+    font-size: 0 
+    +t
+      padding: 0 12px 
+  .slick-slide.slick-current
+    > div > div
+      border-color: $green 
+      &:hover
+        border-color: $green 
+      +dark-common
+        +m
+          border-color: $dark 
+      +t
+        border-color: $green 
+      +m
+        border-color: $gray 
+  .slick-arrow
+    position: absolute
+    top: calc(100% + 10px)
+    left: 0
+    z-index: 3
+    +t
+      top: 50%
+      transform: translateY(-50%)
+    +m
+      position: absolute
+      top: auto
+      bottom: 0
+      transform: translateY(0)
+      margin: 0
+  .slick-prev
+    left: 0
+    +t
+      left: -64px
+    +m
+      left: calc(50% - 56px) 
+  .slick-next
+    left: 64px
+    +t
+      left: auto
+      right: -64px
+    +m
+      right: calc(50% - 56px) 
+
+.slider-products
+  .slick-arrow
+    position: absolute
+    top: -125px
+    +x
+      top: -117px
+    +t
+      top: -112px
+    +m
+      top: auto
+      bottom: 0
+  .slick-prev
+    right: 88px
+    +x
+      right: 92px
+    +t
+      right: 88px
+    +m
+      right: auto
+      left: calc(50% - 56px) 
+  .slick-next
+    right: 24px
+    +x
+      right: 28px
+    +t
+      right: 24px
+    +m
+      right: calc(50% - 56px)  
+
+.slick-arrow
+  background-position: center 
+  background-repeat: no-repeat 
+  background-size: 8px 
+  background-color: $gray
+  border: 2px solid $gray
+  &:hover
+    background-color: transparent  
+    border-color: $bl-dark
+  +dark-common
+    background-color: $dark
+    border-color: $dark
+    &:hover
+      background-color: $dark
+      border-color: $dark-wh
+
+.slick-next
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.293.293a1 1 0 0 0 0 1.414L5.586 7 .293 12.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6a1 1 0 0 0-1.414 0z' fill='black'/%3E%3C/svg%3E%0A") 
+  +dark-common
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.293.293a1 1 0 0 0 0 1.414L5.586 7 .293 12.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6a1 1 0 0 0-1.414 0z' fill='white'/%3E%3C/svg%3E%0A") 
+    
+.slick-prev
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.707.293a1 1 0 0 1 0 1.414L2.414 7l5.293 5.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0z' fill='black'/%3E%3C/svg%3E%0A")
+  +dark-common
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.707.293a1 1 0 0 1 0 1.414L2.414 7l5.293 5.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0z' fill='white'/%3E%3C/svg%3E%0A")
+
+
+
+  
+

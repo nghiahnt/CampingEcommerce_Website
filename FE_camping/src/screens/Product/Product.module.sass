@@ -1,0 +1,277 @@
+@import ../../styles/helpers
+
+.breadcrumbs
+  margin-bottom: 32px
+
+.row
+  display: flex
+  padding-right: 6px
+  +x
+    padding: 0
+  +r(1279)
+    display: block
+    max-width: 680px
+    margin: 0 auto 
+  +t
+    max-width: 504px
+
+.col
+  &:first-child
+    flex: 0 0 calc(100% - 490px)
+    width: calc(100% - 490px)
+    padding-right: 72px
+    +x
+      padding-right: 56px
+    +r(1279)
+      width: 100%
+      margin-bottom: 64px
+      padding: 0 
+    +m
+      margin-bottom: 56px
+  &:nth-child(2)
+    flex: 0 0 490px
+    width: 490px
+    align-self: center
+    +r(1279)
+      width: 100%
+      text-align: center 
+
+.gallery
+  display: flex
+  align-items: flex-start
+  +t
+    flex-direction: column-reverse
+  +m
+    display: block
+    position: relative
+
+.container
+  flex: 0 0 152px
+  width: 152px
+  margin: -12px 0
+  +t
+    flex: 0 0 calc(100% + 24px)
+    width: calc(100%  + 24px)
+    margin: 0 -12px
+
+.pic
+  max-width: 100% 
+  max-height: 100% 
+
+.slider
+  visibility: hidden
+  +m
+    padding-bottom: 88px
+
+.slider .preview
+  border: 2px solid $gray
+  border-radius: 32px 
+  overflow: hidden 
+  cursor: pointer
+  transition: border-color .25s
+  display: block
+  background: $gray
+  +dark
+    background: $dark
+    border-color: $dark
+  +m
+    border-radius: 48px 
+  &:hover
+    border-color: rgba($bl, .1) 
+    +dark
+      border-color: rgba($dark-wh, .1)
+      +m
+        border-color: $dark 
+    +t
+      border-color: $gray 
+
+.wrap
+  position: relative
+  flex-grow: 1
+  padding-left: 25px
+  +t
+    margin-bottom: 24px
+    padding: 0
+  +m
+    position: static
+    margin: 0
+
+.magnifier
+  position: absolute
+  right: 40px
+  bottom: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  background: $wh
+  font-size: 0
+  pointer-events: none
+  +dark
+    background: $br-dark
+  > svg
+    font-size: 20px
+    fill: $bl-dark
+    +dark
+      fill: $wh
+  +m
+    display: none
+
+.status
+  position: absolute
+  top: 40px
+  right: -40px
+  z-index: 5
+  min-width: 155px
+  padding: 0 24px 
+  text-align: center
+  border-radius: 32px 
+  background: $red 
+  border: 2px solid $wh
+  line-height: 52px
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+  color: #F7FAFC
+  pointer-events: none
+  +dark
+    border-color: $bg-dark
+  +d
+    top: 24px
+    right: -24px
+    min-width: 96px
+    padding: 0 14px
+    border-radius: 24px 
+    font-size: 14px
+    line-height: 36px
+  &.sale
+    background: $red
+  &.new
+    background: $green 
+
+.title
+  margin-bottom: 32px
+
+.details
+  display: flex
+  align-items: center
+  margin-bottom: 32px
+  +r(1279)
+    justify-content: center
+
+.prices
+  display: flex
+  align-items: center
+  font-weight: 600 
+
+.old
+  margin-right: 16px
+  text-decoration: line-through
+  font-size: 20px
+  color: rgba($bl, .24)
+  +dark
+  color: rgba($dark-wh, .24)
+  +m
+    margin-right: 8px
+    font-size: 16px
+
+.actual
+  font-size: 32px
+  +m
+    font-size: 24px
+
+.category
+  margin-right: 32px
+  padding: 0 32px
+  border-radius: 32px 
+  font-size: 20px
+  font-weight: 700  
+  line-height: 56px 
+  text-transform: uppercase
+  +m
+    margin-right: 24px
+    padding: 0 24px
+    border-radius: 24px
+    font-size: 16px
+    line-height: 48px  
+
+.code
+  margin-bottom: 48px
+  line-height: 2
+  font-weight: 500 
+  color: rgba($bl, .4) 
+  +dark
+    color: rgba($dark-wh, .4)
+  +m
+    margin-bottom: 40px
+  .number
+    margin-left: 8px
+    color: $bl
+    +dark
+      color: $dark-wh 
+
+.control
+  display: flex
+  align-items: center
+  +r(1279)
+    justify-content: center
+  +m
+    flex-wrap: wrap
+    max-width: 230px
+    margin: 0 auto 
+
+.counter
+  margin-right: 24px
+  +m
+    margin: 0 0 24px 
+
+.button
+  margin-right: 24px
+
+.favorite
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-shrink: 0
+  width: 64px
+  height: 64px 
+  border: 2px solid $gray
+  border-radius: 50% 
+  transition: border-color .25s
+  +dark
+    border-color: $dark
+    fill: $wh
+  &:hover
+    border-color: $bl-dark
+    +dark
+      border-color: rgba($dark-wh, .1) 
+  +m
+    width: 48px
+    height: 48px
+  .icon
+    font-size: 26px
+    transition: fill .25s 
+    &.active
+      fill: $red
+    +m
+      font-size: 20px
+  // .icon-heart-border
+  //   fill: $bl-dark
+  // .icon-heart-fill
+  //   position: absolute
+  //   top: 50%
+  //   left: 50%
+  //   transform: translate(-50%,-50%)
+  //   z-index: 2
+  //   fill: $red
+  //   opacity: 0
+  // &:hover
+  //   border-color: $bl-dark 
+  // &.active 
+  //   .icon-heart-border
+  //     opacity: 0
+  //   .icon-heart-fill
+  //     opacity: 1

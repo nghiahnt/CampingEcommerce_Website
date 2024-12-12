@@ -1,0 +1,55 @@
+@import ../../styles/helpers
+
+.breadcrumbs
+  margin-bottom: 32px
+  
+.list
+  display: flex
+  flex-wrap: wrap
+  margin: -72px -24px 0
+  +x
+    margin: -64px -28px 0
+  +t
+    margin: -64px -24px 0 
+  +a
+    display: block
+    margin: 0
+
+.result
+  margin-bottom: 72px
+  font-size: 20px
+  line-height: 1.6
+  +x
+    margin-bottom: 64px
+  +m
+    margin-bottom: 56px
+    font-size: 16px
+
+.counter
+  font-weight: 700
+
+.product
+  flex: 0 0 calc(25% - 48px)
+  width: calc(25% - 48px)
+  margin: 72px 24px 0 
+  position: relative
+  color: $bl
+  +dark
+    color: $dark-wh
+  &:hover .button
+    visibility: visible
+    opacity: 1
+  +x
+    flex: 0 0 calc(33.333% - 56px)
+    width: calc(33.333% - 56px)
+    margin: 64px 28px 0
+  +t
+    flex: 0 0 calc(50% - 48px)
+    width: calc(50% - 48px)
+    margin: 64px 24px 0 
+  +a
+    width: 100%
+    margin: 0
+  +nl
+    +a
+      margin-bottom: 56px

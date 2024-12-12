@@ -1,0 +1,151 @@
+@import ../../styles/helpers
+
+.header
+  padding: 24px
+  border-radius: 32px 
+  background: $wh
+  border: 2px solid $gray
+  +dark
+    border-color: $dark
+    background: $bg-dark
+
+.category
+  margin-bottom: 48px
+  font-size: 32px
+  font-weight: 600 
+  line-height: 1.5
+  +m
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 1.6
+
+.list
+  padding-bottom: 48px 
+  +m
+    padding-bottom: 40px
+  .item
+    display: flex
+    align-items: center
+    +m
+      display: block
+      text-align: center
+    +nl
+      margin-bottom: 24px
+      +m
+        margin-bottom: 40px
+  .preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 96px
+    height: 96px
+    border-radius: 16px
+    background: $gray  
+    font-size: 0
+    +dark
+      background: $dark 
+    +m
+      margin: 0 auto 24px
+    img
+      max-width: 100%
+      max-height: 100%
+  .details
+    flex-grow: 1
+    padding: 0 16px 0 24px 
+    +m
+      margin-bottom: 40px
+      padding: 0
+    .product
+      display: block
+      margin-bottom: 16px
+      font-size: 20px
+      line-height: 1.6
+      font-weight: 600
+      color: $bl
+      +dark
+        color: $dark-wh
+    .price
+      display: flex
+      align-items: center
+      font-size: 16px
+      line-height: 1.5
+      font-weight: 600  
+      +m
+        justify-content: center
+      .old
+        margin-right: 12px
+        font-size: 14px
+        text-decoration: line-through
+        color: rgba($bl, .24)
+        +dark
+          color: rgba($dark-wh, .24)
+  .remove
+    position: relative
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    align-self: flex-start
+    width: 48px
+    height: 48px 
+    margin-top: 24px
+    border: 2px solid $gray
+    border-radius: 50% 
+    font-size: 0
+    transition: border-color .25s
+    +dark
+      border-color: $dark
+      &:hover
+        border-color: $dark-wh
+    +m
+      margin: 0
+    .icon
+      font-size: 16px
+      fill: $bl-dark
+      +dark
+        fill: $wh
+
+    &:hover
+      border-color: $bl-dark
+
+.total
+  margin-bottom: 24px
+  font-size: 20px
+  display: flex
+  align-items: center
+  font-weight: 600
+  line-height: (40/24)
+  .text:first-child
+    margin-right: auto
+
+.buttons
+  display: flex
+  margin: 0 -12px
+  .button
+    flex: 0 0 calc(50% - 24px)
+    min-width: calc(50% - 24px)
+    margin: 0 12px 
+
+.checkout
+  padding: 56px 
+  border-radius: 48px 
+  +t
+    border-radius: 40px
+  +m
+    padding: 24px
+    border-radius: 32px  
+  .header
+    margin-bottom: 24px
+    font-size: 20px
+  .total
+    margin-bottom: 80px
+    font-size: 24px
+    +m
+      margin-bottom: 56px
+      font-size: 16px
+
+
+
+
+      

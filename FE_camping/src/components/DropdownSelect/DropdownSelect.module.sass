@@ -1,0 +1,136 @@
+@import ../../styles/helpers
+
+.drop
+  position: relative
+  min-width: 240px
+  z-index: 10
+  display: inline-block
+  +t
+    min-width: 100%
+
+.label
+  margin-bottom: 16px
+  line-height: 1.5
+  +m
+    margin-bottom: 8px
+    font-size: 14px
+    line-height: (24/14) 
+
+.head
+  position: relative
+  display: flex
+  align-items: center
+  height: 64px  
+  padding: 0 55px 0 22px 
+  border-radius: 32px 
+  border: 2px solid $gray
+  background: $wh 
+  font-size: 20px
+  font-weight: 600 
+  white-space: nowrap
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  transition: all .25s
+  +dark
+    border-color: $dark
+    background: $bg-dark  
+    color: $dark-wh 
+  +m
+    height: 48px
+    padding: 0 46px 0 14px
+    border-radius: 24px 
+    font-size: 16px  
+  &:after
+    content: ""
+    position: absolute
+    top: 50%
+    right: 24px
+    transform: translateY(-50%) 
+    width: 14px
+    height: 8px
+    background: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / auto 100%
+    transition: transform .25s
+    +dark
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='white'/%3E%3C/svg%3E%0A") 
+    +m
+      right: 18px
+
+.body
+  position: absolute
+  top: calc(100% - 2px)
+  left: 0
+  right: 0
+  padding: 16px 22px 
+  border-width: 0 2px 2px
+  border-style: solid
+  border-color: $gray 
+  border-radius: 0 0 32px 32px
+  background: $wh 
+  visibility: hidden
+  opacity: 0
+  transition: all .25s  
+  +dark
+    border-color: $dark
+    background: $bg-dark
+  +m
+    padding: 10px 14px 
+    border-radius: 0 0 24px 24px 
+
+.option
+  position: relative
+  display: block
+  padding-right: 25px
+  font-size: 20px
+  line-height: 32px
+  color: $bl 
+  transition: color .25s 
+  cursor: pointer
+  +text-overflow
+  +dark
+    color: $dark-wh
+  +m
+    font-size: 16px
+  &:before
+    content: ""
+    position: absolute
+    top: 13px
+    right: 3px
+    width: 14px
+    height: 9px
+    background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7622 0.35272C14.1197 0.773691 14.0683 1.40476 13.6473 1.76226L5.39729 8.76827C5.02398 9.08529 4.476 9.08529 4.10269 8.76827L0.352689 5.58372C-0.0682814 5.22622 -0.119739 4.59515 0.237755 4.17418C0.595249 3.75321 1.22632 3.70175 1.64729 4.05925L4.74999 6.6941L12.3527 0.237785C12.7737 -0.119709 13.4047 -0.0682508 13.7622 0.35272Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / auto 100% 
+    opacity: 0
+    transition: opacity .25s 
+    +dark
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7622 0.35272C14.1197 0.773691 14.0683 1.40476 13.6473 1.76226L5.39729 8.76827C5.02398 9.08529 4.476 9.08529 4.10269 8.76827L0.352689 5.58372C-0.0682814 5.22622 -0.119739 4.59515 0.237755 4.17418C0.595249 3.75321 1.22632 3.70175 1.64729 4.05925L4.74999 6.6941L12.3527 0.237785C12.7737 -0.119709 13.4047 -0.0682508 13.7622 0.35272Z' fill='white'/%3E%3C/svg%3E%0A")
+    +m
+      top: 11px
+  &:hover
+    color: rgba($bl, .75)
+    +dark
+      color: rgba($dark-wh, .75)
+  &.active
+    font-weight: 600 
+    color: $bl
+    +dark 
+      color: $dark-wh
+    &:before
+      opacity: 1
+  +nl
+    margin-bottom: 32px
+    +m
+      margin-bottom: 12px
+
+.open
+  z-index: 15
+
+.open .head
+  border-radius: 32px 32px 0 0
+  border-bottom-color: transparent
+  +m
+    border-radius: 24px 24px 0 0   
+  &:after
+    transform: translateY(-50%) rotate(180deg)
+    
+.open .body
+  visibility: visible
+  opacity: 1

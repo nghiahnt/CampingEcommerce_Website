@@ -1,0 +1,32 @@
+@import ../../styles/helpers
+
+.list
+  display: flex
+  flex-wrap: wrap
+  margin: -72px -24px 0
+  +x
+    margin: -64px -28px 0
+  +t
+    margin: -64px -24px 0 
+  +a
+    display: block
+    margin: 0
+
+.image
+  height: 700px
+  margin-bottom: 40px
+  border-radius: 56px 
+  width: 100%
+  +cover
+  +x
+    height: 430px
+    margin-bottom: 32px
+    border-radius: 40px 
+  +d
+    height: 272px
+  +t
+    height: 320px
+    border-radius: 48px 
+  +m
+    height: auto
+    padding-bottom: 100%
